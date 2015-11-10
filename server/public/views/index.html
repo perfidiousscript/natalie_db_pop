@@ -20,17 +20,17 @@
         <form name="messageForm" method="post">
                 <div class="form-field">
                     <label for="name">Name</label>
-                    <input ng-model="note.name" type="text" name="name" placeholder="Enter Name">
+                    <input class="input-block-level" ng-model="note.name" type="text" name="name" placeholder="Enter Name" size="35">
 
 
 
                     <label for="email">E-mail</label>
-                    <input type="text" ng-model="note.email" name="email" placeholder="Enter Email">
+                    <input type="text" ng-model="note.email" name="email" placeholder="Enter Email" size="35">
 
 
 
                     <label for="otherContact">Other Contact Information</label>
-                    <input type="text" ng-model="note.otherContact" name="otherContact" placeholder="Other Contact Info">
+                    <textarea type="text" ng-model="note.otherContact" name="otherContact" placeholder="Other Contact Info" cols="35"></textarea>
                 </div>
 
             <div class="form-field-message">
