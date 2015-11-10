@@ -8,23 +8,23 @@ myApp.controller('FormController', ['$scope', '$http', function($scope, $http){
     $scope.note = {};
     //$scope.nameArray=[];
 
+    var defaultForm = {
+        name : "",
+        email : "",
+        message: "",
+        otherContact: ""
+    };
+
     //POST
     $scope.clickButton = function(note){
         $http.post('/submit', note).then(function(response){
 
         console.log("Script works!");
 
-            //$scope.getPeople();
+            $scope.messageForm.$setPristine();
+            $scope.note = defaultForm;
+
         });
     };
-
-    ////GET
-    //$scope.getPeople = function(){
-    //    $http.get('/post/data').then(function(response){
-    //        $scope.nameArray = response.data;
-    //    });
-    //};
-    //
-    //$scope.getPeople();
 
 }]);

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="vendors/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/stylesheet.css">
 
     <script type="text/javascript" src="/vendors/angular.min.js"></script>
@@ -11,20 +12,33 @@
 </head>
 
 <body>
-    <div ng-controller="FormController">
-        <label for="name">Name</label>
-        <input ng-model="note.name" type="text" name="name" placeholder="Enter Name">
 
-        <label for="email">E-mail</label>
-        <input type="email" ng-model="note.email" name="email" placeholder="Enter Email">
+    <h3>Input Your Message Here</h3>
 
-        <label for="otherContact">Other Contact Information</label>
-        <input type="text" ng-model="note.otherContact" name="otherContact" placeholder="Other Contact Info">
+    <div ng-controller="FormController" class="container">
 
-        <label for="message">Message</label>
-        <textarea type="text" ng-model="note.message" name="message" placeholder="Message here" rows="10" cols="35"></textarea>
+        <form name="messageForm" method="post">
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input ng-model="note.name" type="text" name="name" placeholder="Enter Name">
 
-        <button ng-click="clickButton(note)">Submit</button>
+
+
+                    <label for="email">E-mail</label>
+                    <input type="email" ng-model="note.email" name="email" placeholder="Enter Email">
+
+
+
+                    <label for="otherContact">Other Contact Information</label>
+                    <input type="text" ng-model="note.otherContact" name="otherContact" placeholder="Other Contact Info">
+                </div>
+
+            <div class="form-field-message">
+                <label for="message">Message</label>
+                <textarea type="text" ng-model="note.message" name="message" placeholder="Message here" rows="7" cols="35"></textarea>
+            </div>
+        </form>
+            <button ng-click="clickButton(note)" class="btn btn-success">Submit</button>
     </div>
 </body>
 

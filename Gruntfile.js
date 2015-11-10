@@ -15,14 +15,14 @@ module.exports = function(grunt){
             }
         },
         copy: {
-            //bootstrap: {
-            //    expand:true,
-            //    cwd: "node_modules/bootstrap/dist/css/",
-            //    src: [
-            //        "bootstrap.min.css"
-            //    ],
-            //    "dest": "server/public/vendors/"
-            //},
+            bootstrap: {
+                expand:true,
+                cwd: "node_modules/bootstrap/dist/css/",
+                src: [
+                    "bootstrap.min.css"
+                ],
+                "dest": "server/public/vendors/"
+            },
             angular: {
                 expand:true,
                 cwd: "node_modules/angular/",
