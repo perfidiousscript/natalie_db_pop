@@ -19,9 +19,8 @@ myApp.controller('FormController', ['$scope', '$http', function($scope, $http){
     $scope.clickButton = function(note){
         $http.post('/submit', note).then(function(response){
 
-        console.log("Script works!");
+        console.log("Response.data", response.data);
 
-            $scope.messageForm.$setPristine();
             $scope.note = defaultForm;
 
         });

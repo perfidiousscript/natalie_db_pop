@@ -2,14 +2,19 @@ h3 {
     text-align: center;
 }
 
+.container {
+    text-align: center;
+}
 
 label {
     display: block;
     margin-top: 20px;
+    text-align: left;
 }
 
 input, textarea {
     margin-top: 5px;
+    text-align: left;
 }
 
 .form-field-message {
